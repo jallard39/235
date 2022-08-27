@@ -1,0 +1,2 @@
+ErrorDocument 404 /jma6465/235/error/error.html
+DirectoryIndex noterror.html
