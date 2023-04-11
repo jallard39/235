@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Phrases</title>
+    <link rel="stylesheet" href="random-phrases.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>The Princess Bride: S. Morgenstern's Classic Tale of True Love and High Adventure</h1>
+        </header>
+        
+        <main>
+            <p>Random Quote Here!</p>
+            <button>Relive the Adventure</button>
+        </main>
+
+        <footer>
+            <p>Copyright 2022 Jordan Allard</p>
+        </footer>
+    </div>
+
+    <script>
+        "use strict";
+
+        // Quote Source: https://www.buzzfeed.com/williambarrios/best-princess-bride-quotes-lines
+        let phrases = [
+            "Hello. My name is Inigo Montoya. You killed my father. Prepare to die.",
+            "Inconceivable!",
+            "You keep using that word. I do not think it means what you think it means.",
+            "Life is pain, Highness. Anyone who says differently is selling something.",
+            "I always think that everything could be a trap, which is why I'm still alive.",
+            "As you wish.",
+            "In my day, television was called 'a book.'",
+            "You seem a decent fellow...I hate to kill you.",
+            "You're trying to kidnap what I've rightfully stolen.",
+            "Never go in against a Sicilian when death is on the line!",
+            "Anybody want a peanut?",
+            "Turns out your friend here is only mostly dead.",
+            "Since the invention of the kiss, there have been five kisses rated the most passionate, the most pure. This one left them all behind.",
+            "Mawwiage. Mawwiage is what bwings us together today.",
+            "Boo!",
+            "Rodents of Unusual Size? I don't think they exist."
+        ];
+
+        let displayQuote = () => {
+            let p = document.querySelector("main p");
+            p.innerHTML = phrases[Math.floor(Math.random() * phrases.length)];
+        }
+
+        let button = document.querySelector("button");
+
+        button.addEventListener("click", displayQuote);
+        window.onload = displayQuote;
+
+    </script>
+</body>
+
+</html>

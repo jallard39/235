@@ -1,0 +1,38 @@
+/* Do everything in this file */
+body {
+    margin: 2rem 5rem;
+}
+
+h2 {
+    border-bottom: 2px solid red;
+    clear: right;
+}
+
+figure {
+    float: right;
+    width: 40%;
+    margin: 2rem;
+}
+
+figure img {
+    width: 100%;
+}
+
+.tet {
+    float: left;
+    width: 25%;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.tet img {
+    width: 100%;
+}
+
+footer {
+    clear: both;
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    z-index: -1;
+}

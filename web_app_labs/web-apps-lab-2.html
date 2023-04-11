@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>DOM-3</title>
+	<style>
+		body{border:1px solid gray;}
+		p b{transform: rotate(20deg)}
+	</style>
+</head>
+<body>
+<h1>My Page</h1>
+<h2>Info</h2>
+<h2>Pictures</h2>
+<h2>More Info</h2>
+<p>Blah <b>Blah</b> Blah</p>
+<p>Blah <b>Blah</b> Blah</p>
+<p id="lastParagraph">Blah <b>Blah</b> Blah</p>
+<footer>Copyright &copy; <b>20XX</b></footer>
+<script>
+	"use strict"; 
+
+    document.querySelector("h1").innerHTML = "My UFO Page";
+    document.querySelector("h2:nth-of-type(1)").innerHTML = "My UFO Info";
+    document.querySelector("h2:nth-of-type(2)").innerHTML = "My UFO Pictures";
+    document.querySelector("h2:nth-of-type(3)").innerHTML = "";
+    
+	let body = document.body;
+    body.style.fontFamily = "sans-serif";
+    body.style.color = "#ad2300";
+
+    let p1 = document.querySelector("p");
+    p1.innerHTML = "Report your UFO sightings here: "
+
+    let link = document.createElement("a");
+    link.href = "http://www.nuforc.org/";
+    link.innerHTML = "http://www.nuforc.org/";
+    p1.appendChild(link);
+
+    p1.style.color = "green";
+    p1.style.fontWeight = "bold";
+    p1.style.fontSize = "2em";
+    p1.style.textTransform = "uppercase";
+    p1.style.textShadow = "3px 2px #A44";
+
+    let p2 = document.querySelector("p:nth-of-type(2)");
+    p2.innerHTML = "";
+
+    let p3 = document.querySelector("#lastParagraph");
+    p3.innerHTML = "";
+
+    let img = document.createElement("img");
+    img.src = "http://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/POLL/drzr4elrae-bgpblq3cska.jpg";
+    img.alt = "UFO";
+    p3.appendChild(img); 
+
+    let year = document.querySelector("b");
+    year.innerHTML = "2022";
+
+    let name = document.createTextNode(" Jordan Allard");
+    let footer = document.querySelector("footer");
+    footer.appendChild(name);    
+
+	</script>
+</body>
+</html>

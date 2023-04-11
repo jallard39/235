@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Project 3 Documentation</title>
+    <link rel="stylesheet" href="css/doc.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header" class="section">
+            <h1>Project 3 Documentation</h1>
+            <a href="index.html">Return to Game Page</a>  |  
+            <a href="about.html">View Proposal</a> | 
+            <a href="../index.html">Return to 235 Home Page</a>
+        </div>
+        <div id="process" class="section">
+            <h1>Process</h1>
+            <h2>Assets brainstorm: </h2>
+            <p>Pizza Materials:</p>
+            <ul>
+                <li>Dough</li>
+                <li>Red Sauce</li>
+                <li>Alfredo</li>
+                <li>Cheese</li>
+                <li>Pepperoni</li>
+                <li>Mushrooms</li>
+                <li>Sausage</li>
+                <li>Peppers</li>
+                <li>Olives</li>
+            </ul>
+            <p>Other:</p>
+            <ul>
+                <li>Background</li>
+                <li>Order Display</li>
+                <li>Score Display</li>
+                <li>Conveyor Belt</li>
+                <li>Ingredient Piles & Containers</li>
+            </ul>
+        </div>
+        
+        <div id="sources" class="section">
+            <h1>Sources</h1>
+            <ul>
+                <li>Font used: <a href="https://fonts.google.com/specimen/Acme?category=Sans+Serif,Display,Handwriting">Acme (Google Fonts)</a></li>
+                <li>Music used: <a href="https://www.youtube.com/watch?v=1NUZ4fLeMG0">Pizzatron 3000 | Club Penguin OST</a>. Original composition by Chris "Screenhog" Hendricks. Uploaded to YouTube by Club Penguin High Quality OST.</li>
+                <li>Programming reference: <a href="https://pixijs.download/release/docs/index.html">PixiJS docs</a> (PixiJS-related queries)</li>
+                <li>Programming reference: <a href="https://developer.mozilla.org/en-US/">Mozilla mdn docs</a> (basic JavaScript)</li>
+                <li>Programming reference: <a href="https://www.w3schools.com/tags/ref_av_dom.asp">W3 Schools</a> (HTML Audio/Video DOM)</li>
+                <li>Assets created using <a href="https://www.photopea.com/">Photopea</a></li>
+                <li>Inspiration taken from <a href="https://www.numuki.com/game/pizzatron-3000/">Club Penguin's Pizzatron 3000</a></li>
+            </ul>
+        </div>
+
+        <div id="notes" class="section">
+            <h1>Notes from the Developer</h1>
+            <ul>
+                <li>
+                    I lost so much sleep for this project, but I wanted to take the time to make something I could be proud of. I"m really happy with how the final product turned out! I know it was a little late, but I hope you can see the effort and care that went into it.
+                </li>
+                <li>
+                    One element I want to draw your attention to is the sauce spreading mechanic. Originally I didn't think I would be able to pull it off; I thought it would have to be a simple drag and drop. But with a bit of experimentation, I was able to get it working, and I'm actually pretty pleased with how it turned out. It's not perfect and there's definitely room to improve it, but I just don't have the time. Getting it to this state was already one of the most time consuming parts of the project.
+                </li>
+                <li>
+                    Another element that I am proud of is the way the orders are displayed. The game would still work perfectly fine if the orders were just blocks of text with numbers, and in fact that's actually how the original game displayed them. It would have been much easier to program this way. However, I decided to go with a more visual and responsive order UI, and I think the game is better for it. Each ingredient is grayed out as it gets added, so players can tell easily see the status of the order with just a quick glance. It also makes counting the toppings much easier. The spacing and placement of the toppings adapts to the randomness of each order, so it the display always looks nice. And finally, since the game response to a successful pizza and a strike is the same, I wanted to have the order screen display a checkmark or an X so the player is always aware of the state of their score.
+                </li>
+                <li>
+                    I would also like to draw attention to the fact that all the assets used in this game (except the font) were hand-drawn by me and custom made for this project. I did not use pre-existing assets of any kind. I believe this makes the project style feel cohesive and I'd like to think that it gives it a lot of charm. 
+                </li>
+                <li>
+                    In general, the aspect of this project that I am the most proud of is its polish. I took the time to sort out even the smallest details on this project, and I'd like to think that the final product is clean, fun, aesthetically pleasing, and overall very professional. I hope this project feels like a real, complete (or almost complete) game, and not just a simple school assignment.
+                </li>
+                <li>
+                    There's still plenty I'd like to add for the future, but obviously I'm already behind enough as it is. If I had the time, I would like to add a settings menu that would allow the player to scale the difficulty curve (i.e. the rate at which the speed increases and the number of toppings possible in orders). I also would probably implement a local storage system to retain high scores and some other quality-of-life additions, such as a mute button for the music.
+                </li>
+            </ul>
+        </div>
+
+        <div id="requirements" class="section">
+            <h1>Meeting the Requirements</h1>
+            <h2>Functional</h2>
+            <p>
+                Uses PixiJS as an underlying graphics engine to create a game experience. The game is functional, useful, fun, and easy to use. The functionality definitely goes beyond what we did in class! Safeguards are in place to ensure the app throws no errors or exceptions.
+            </p>
+            <h2>Design & Interaction</h2>
+            <p>
+                I put a fair bit of effort into making the assets for this project, so I hope that it is pleasing to the eye. Widgets and buttons are well-labeled. I tried to differentiate interactable objects and important labels by outlining them in black. The app should be fairly self explanatory, but just in case, instructions are provided on the web page. The canvas is not larger than 1000x600, so it can still be properly played on a 1024 x 768 display.
+            </p>
+            <h2>Media</h2>
+            <p>
+                All images are saved as pngs and are cropped and scaled appropriately. I decided to add music to make the game a bit more lively. The volume lowers during the pause menus and game over screen, and does not play on the main menu. Every asset used in this game was hand-drawn by me specifically for this project. The font was also chosen specifically for this project and has not been used in any class projects prior to this.
+            </p>
+            <h2>HTML/CSS</h2>
+            <p>
+                HTML and CSS are valid for all pages. CSS is contained in an external stylesheet. All JavaScript is also stored in separate files. HTML elements are used practically and semantically.
+            </p>
+            <h2>Code Conventions</h2>
+            <p>
+                Currently, this project uses four custom ES6 classes (Pizza, Topping, ToppingBin, and Order). Var is never used. All DOM traversal is done with querySelector() and querySelectorAll(). I tried to factor out blocks of similar code into separate functions wherever possible, although I think it probably could be reduced more. Similar to Circle Blast, the JavaScript for this project is stored across three files: main.js, classes.js, and utilities.js. All variable and functions start with lowercase letters, and I did my best to keep my code well-commented. All console.log() calls have been removed. 
+            </p>
+        </div>
+        
+    </div>
+    
+
+</body>
+</html>

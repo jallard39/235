@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Sound and Sample Finder</title>
+</head>
+<body>
+
+    <p>Test request to prove that I can access the FreeSound API</p>
+
+    <p><b>Search Term: </b></p>
+    <p><b>Request URL: </b></p>
+    <p><b>Query Results: </b><br></p>
+
+</body>
+<script>
+
+    let term = "piano";
+
+    let createURL = (term) => {
+        const FREESOUND_URL = "https://freesound.org/apiv2/search/text/?";
+        let FREESOUND_KEY = "11U7tQoByGEiMT481lDuA6Qje6OefbD5gF5sNAVZ";
+        term = encodeURIComponent(term.trim());
+
+        let url = FREESOUND_URL + "token=" + FREESOUND_KEY + "&query=" + term;
+
+        console.log(url);
+        return url;
+    }
+
+    let getData = (url) => {
+        let xhr = new XMLHttpRequest();
+        xhr.onload = dataLoaded;
+        xhr.onerror = dataError;
+        xhr.open("GET", url);
+        xhr.send();
+    }
+
+    let dataLoaded = (e) => {
+        let xhr = e.target;
+        console.log(xhr.responseText);
+
+        let pList = document.querySelectorAll("p");
+        pList[1].innerHTML += term;
+        pList[2].innerHTML += createURL(term);
+        pList[3].innerHTML += xhr.responseText;
+    }
+
+    let dataError = (e) => {
+        console.log("An error occurred");
+    }
+    
+    getData(createURL(term));
+
+    
+
+</script>
+</html>

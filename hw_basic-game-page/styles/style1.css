@@ -1,0 +1,41 @@
+body {
+    background-color:#242424;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color:white;
+    margin-left: 50px;
+    font-family: 'Oranienbaum', serif;
+}
+
+h2 {
+    color:cadetblue;
+    font-family: 'Oranienbaum', serif;
+    text-decoration: underline;
+    margin-left:50px;
+    margin-right: 50px;
+}
+
+p, ul {
+    color:white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+blockquote {
+    color: white;
+    font-style: italic;
+    margin-left: 50px;
+}
+
+#gallery {
+    border-bottom: 3px solid aquamarine;
+    border-top: 3px solid aquamarine;
+    text-align: justify;
+}
+
+blockquote ~ p {
+    margin-left: 100px;
+    color:gray;
+}

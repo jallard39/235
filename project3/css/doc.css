@@ -1,0 +1,47 @@
+body {
+    background-color:brown;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#wrapper {
+    background-color:rgb(227, 146, 47);
+    margin: 1rem 5rem;
+    padding: 2rem;
+}
+
+.section {
+    border: 5px solid saddlebrown;
+    background-color:wheat;
+    padding: 0 2rem 1rem 2rem;
+    margin: 1rem;
+}
+
+#references {
+    display: flex;
+    border-bottom: 2px solid black;
+}
+
+.reference {
+    margin: 10px;
+}
+
+.reference img {
+    height: 250px;
+}
+
+#mockups {
+    display: flex;
+}
+
+.mockup {
+    margin: 10px;
+    max-width: 500px;
+}
+
+.mockup img {
+    height: 300px;
+}
+
+#notes li {
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,54 @@
+body {
+    background-color:brown;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-areas:
+        "game game"
+        "settings settings"
+        "description links";
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(227, 146, 47);
+    margin: 1rem 5rem;
+    padding: 2rem;
+}
+
+#game {
+    grid-area: game;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+canvas {
+    border: 10px solid black;
+}
+
+#description {
+    grid-area: description;
+    border: 5px solid saddlebrown;
+    background-color:wheat;
+    margin: 0 1.5rem;
+    padding: 0 1.5rem 1rem 1.5rem;
+}
+
+#links {
+    grid-area: links;
+    border: 5px solid saddlebrown;
+    background-color:wheat;
+    margin: 0 1.5rem;
+    padding: 0 1.5rem 1rem 1.5rem;
+}
+
+#settings {
+    border: 5px solid saddlebrown;
+    background-color:wheat;
+    margin: 1.5rem;
+    margin-top: -2rem;
+    padding: 1rem 1.5rem;
+}
+
+#secret-settings {
+    grid-area: settings;
+}

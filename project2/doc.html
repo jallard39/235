@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Project 2 Documentation</title>
+    <link href="css/doc.css" rel="stylesheet">
+</head>
+<body>
+    <h2>Link to Project 3: <a href="https://people.rit.edu/jma6465/235/project2/index.html">https://people.rit.edu/jma6465/235/project2/index.html</a></h2>
+
+    <hr>
+
+    <h1>Brainstorm & Planning</h1>
+    <h2>User input Brainstorm</h2>
+    <ul>
+        <li>Number of results displayed per page</li>
+        <li>Sort results by relevance score, date (oldest/newest), average rating, number of downloads</li>
+        <li>Text search</li>
+        <li>Tag - text search, maybe allow users to add multiple tags?</li>
+        <li>Duration - min and max? EDIT: Checked API, range of values is possible</li>
+        <li>Whether file is loopable or not</li>
+        <li>File type - checkbox (“wav”, “aiff”, “ogg”, “mp3”, “m4a”, “flac”)</li> 
+        <li>License type</li>
+    </ul>
+    <h2>Mockup</h2>
+    <img src="src/IGME 235 Project 2 Mockup.png">;
+    <h2>Proof of Concept</h2>
+    <ul>
+        <li>API Demonstration: <a href="https://people.rit.edu/jma6465/235/project2/concept.html">https://people.rit.edu/jma6465/235/project2/concept.html</a></li>
+    </ul>
+    
+
+    <hr>
+
+    <h1>Sources</h1>
+    <h2>Images</h2>
+    <ul>
+        <li>
+            Header Image: <a href="https://i.pinimg.com/736x/83/bb/f4/83bbf4e501f0f22108b88422be47262f.jpg">https://i.pinimg.com/736x/83/bb/f4/83bbf4e501f0f22108b88422be47262f.jpg</a>
+        </li>
+        <li>
+            Background Image: <a href="https://wallpaperaccess.com/indigo-aesthetic">https://wallpaperaccess.com/indigo-aesthetic</a>
+        </li>
+    </ul>
+
+    <h2>Fonts</h2>
+    <ul>
+        <li>
+            Heebo: <a href="https://fonts.google.com/specimen/Heebo?preview.size=20&category=Sans+Serif,Display,Handwriting">https://fonts.google.com/specimen/Heebo?preview.size=20&category=Sans+Serif,Display,Handwriting</a></li>
+        <li>
+            Notable: <a href="https://fonts.google.com/specimen/Notable?preview.text=Sound%20Finder&preview.text_type=custom&category=Sans+Serif,Display,Handwriting">https://fonts.google.com/specimen/Notable?preview.text=Sound%20Finder&preview.text_type=custom&category=Sans+Serif,Display,Handwriting</a>
+        </li>
+    </ul>
+    <h2>Tutorials</h2>
+    <ul>
+        <li>I didn't have the foresight to include the exact list of sites I looked at, but I can confirm that Google was used quite a bit.</li>
+        <li>
+            When in doubt, my go-to is the reference docs from W3Schools (<a href="https://www.w3schools.com/css/default.asp">CSS</a>, <a href="https://www.w3schools.com/html/default.asp">HTML</a>, <a href="https://www.w3schools.com/js/default.asp">JavaScript</a>)
+        </li>
+        <li>In-class exercises: web-apps-lab-9, gif-finder</li>
+    </ul>
+
+    <hr>
+
+    <div>
+        <h1>Meeting Project Requirements</h1>
+        <h2>A. Functional</h2>
+        <ol>
+            <li>
+                I chose an external API, provided proof of concept by due date, and was successfully able to obtain an API key.
+            </li>
+            <li>
+                The last term searched by the user is stored in the browser local storage. The previously entered values for the tags, loopable checkbox, and sort by drop down are also stored. On load, the last searched term and search and sort preferences will populate in their respective fields, but a fetch request will not be sent until the user hits the search button.
+            </li>
+            <li>
+                There are currently 5 controls that the user can use to filter and display results. These are:
+                <ul>
+                    <li>A search term field that the user types into</li>
+                    <li>Up to five boxes for custom tags that the user can type into</li>
+                    <li>A "loopable" checkbox</li>
+                    <li>"Next" and "Previous" buttons that allow the user view multiple pages of results</li>
+                    <li>A "Sort By" dropdown that the user can use to order results according to the parameter they want</li>
+                </ul>
+            </li>
+            <li>
+                The app does not throw any JavaScript errors or exceptions.
+            </li>
+        </ol>
+
+        <h2>B. Design & Interaction</h2>
+        <ul>
+            <li>
+                Graphic design is pleasing (I hope). It doesn't resemble the Giphy Homework, at least.
+            </li>
+            <li>
+                Widgets are labeled and follow conventions. Users should be able to figure out how to navigate the app without needed external guidance.
+            </li>
+            <li>
+                Errors are handled gracefully. If users run a search without entering any terms, the API returns results based on its own scoring algorthim. It essentially displays the sounds it would show on the homepage. If the user leaves one of the tag boxes blank instead of removing it, it will simply be excluded from the get request. The previous and next buttons are disabled on the first and last pages, respectively, and all search buttons are disabled while fetching a request, to prevent multiple get requests.
+            </li>
+            <li>
+                The text above the results box displays the status of the program. Users will also be able to tell that the program is loading because the buttons are disabled. I would've like to add some kind of spinner, but I ran out of time.
+            </li>
+            <li>
+                I haven't tested every edge case, but the page is somewhat responsive and can gracefully handle browsers of various widths. The results are displayed in a grid that can resize to fit more or less divs per row based on the width of the browser.
+            </li>
+        </ul>
+        
+        <h2>C. HTML/CSS & Media | D. Code Conventions</h2>
+        <ul>
+            <li>HTML and CSS are verified. CSS is contained in an external style sheet.</li>
+            <li>Code is contained in an external JavaScript file. Code uses let and const (no var) and querySelector() and querySelectorAll().</li>
+            <li>
+                Each function has comments explaining what it does. All calls to console.log() are commented out.
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div>
+        <h1>Other Notes</h1>
+        <h2>Things of Note</h2>
+        <ul>
+            <li>
+                I am particularly proud of how the tags turned out. I feel that the process of adding and removing custom tags is very smooth and satisfying, and it took me quite a while to get it right. Connecting the "X" buttons to their respective tags was particularly difficult, but I'm very happy with how it turned out.
+            </li>
+            <li>
+                I wsa very particular with this project because I intend to use this tool in the future. FreeSound is a database of user-uploaded sounds and samples licensed under Creative Commons, and it's a really great place to find free-to-use sound effects. I use it all the time for my IGM projects. However, the interface of FreeSound sometimes bothers me, so I created this tool to allow me to access FreeSound and search for sound effects in a more intuitive way. Perhaps if this project makes it onto the list of example projects, future students can make use of it as well?
+            </li>
+            <li>
+                There are is a lot more that I want to add to this project, but given the time crunch I felt this was a good place to end for now. However, I will probably continue to work on this after this submission. In the future I would like to add more search parameters (see brainstorm) and more information displayed with the results. This API is very extensive and the search parameters are incredibly flexible, and I'd like to incorporate some more of that information into the results. For example, displaying ratings, number of downloads, the date uploaded, file types and file size, etc.
+            </li>
+        </ul>
+        <h2>Self-Grade: A</h2>
+        <ul>
+            <li>
+                I feel that I put a lot of effort into this project, and I did my best to go beyond the bare minimum. I am relatively confident that my project meets all the requirements and then some. I certainly believe that I put in the time and thought required to get an A.
+            </li>
+            <li>
+                However, I will admit I was not very <i>timely</i> with this project, going until the very last day of extension (and technically a few hours after T-T). So while I feel the effort I put in does deserve an A, I understand if I need to be docked points for lateness. I have had a LOT to do this semester and I really feel that I have not been optimizing my time very well.
+            </li>
+        </ul>
+
+    </div>
+
+
+</body>
+</html>

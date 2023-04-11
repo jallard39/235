@@ -1,0 +1,96 @@
+body {
+    background-image: url(../images/background.png);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header, main {
+    width: 75vw;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    background-color: #E5E1EE;
+}
+
+header {
+    background-color: #83BCCB;  
+    border-top: 10px solid #137595;
+    border-bottom: 10px solid #137595;
+    border-left: 20px solid #37a4c0;
+    border-right: 20px solid #37a4c0;
+}
+
+main {
+    border-bottom: 20px solid #e692a0;
+    border-left: 20px solid #e692a0;
+    border-right: 20px solid #e692a0;
+}
+
+#bio img {
+    width: 15rem;
+    float: left;
+    margin: 1rem;
+    padding: 8px;
+    background-color: #5F4D7F;
+    border: 7px solid #e692a0;
+}
+
+#bio p {
+    padding: 1rem;
+}
+
+h2 {
+    clear: both;
+    padding-top: 1rem;
+    border-bottom: 2px solid #137595;
+}
+
+#projectlist {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.proj {
+    border: 4px solid #e692a0;
+    flex: 0 1 30%;
+    padding: 5px 5px;
+    min-width: 200px;
+    background-color: #E5E1EE;
+}
+
+.proj h3 {
+    text-align: center;
+}
+
+.proj p {
+    text-align: left;
+    margin: 1em;
+}
+
+#repo {
+    border: 10px solid #37a4c0;
+    background-color: #83BCCB;
+    padding: 2rem;
+}
+
+a:link {
+    color: #412573;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #5F4D7F;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    background-color:#e692a0;
+}
+
+a:active {
+    color:#5F4D7F;
+}
